@@ -2,6 +2,7 @@ import React from 'react'
 
 import product from "../../assets/images/product_dummy.svg"
 import Header from "./Header"
+import Footer from "./Footer"
 
 
 export default function Main() {
@@ -156,13 +157,7 @@ export default function Main() {
 			</div>
 		
 
-						<footer className="sticky-footer bg-white">
-				<div className="container my-auto">
-					<div className="copyright text-center my-auto">
-						<span>Copyright &copy; Dashboard 2020</span>
-					</div>
-				</div>
-			</footer>
+						<Footer/>
 			
 
 		</div>
