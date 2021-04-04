@@ -6,7 +6,7 @@ import React from "react";
 const Data = () =>{
 
 return (
-    <div className="row">
+    
 
 						
 						<div className="col-md-4 mb-4">
@@ -27,7 +27,7 @@ return (
 
 						
 						
-	</div>
+
 )
 
 }
