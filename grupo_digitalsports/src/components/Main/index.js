@@ -1,8 +1,8 @@
 import React from 'react'
 
 import product from "../../assets/images/product_dummy.svg"
-import Header from "./Header"
-import Footer from "./Footer"
+import Header from "./Header/header"
+import Footer from "./Footer/footer"
 import Data from './Data/Data'
 
 
