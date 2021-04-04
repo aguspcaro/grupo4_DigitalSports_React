@@ -7,7 +7,12 @@ import Data from './Data/Data'
 import Panel from "./Panel/Panel"
 
 export default function Main() {
-    return (
+   
+	
+	
+	
+	
+	return (
         <div id="content-wrapper" className="d-flex flex-column">
 
 			
