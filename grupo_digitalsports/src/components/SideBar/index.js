@@ -1,59 +1,59 @@
 import React from 'react'
 
+import NavItem from './NavItem/NavItem'
+
 export default function SideBar() {
+
     return (
+		
         <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-			
-			<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-				<div className="sidebar-brand-icon">
-					<i className="fas fa-chart-line"></i>
+			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+
+				<div class="sidebar-brand-icon">
+
+					<i class="fas fa-chart-line"></i>
+
 				</div>
-				<div className="sidebar-brand-text mx-3">Admin</div>
+
+				<div class="sidebar-brand-text mx-3">Admin</div>
+
 			</a>
-
 			
-			<hr className="sidebar-divider my-0"/>
+			<hr className="sidebar-divider my-0"/>		
 
-			
-			<li className="nav-item active">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard</span></a>
-			</li>
+			<NavItem title="Dashboard">
 
+				<i className="fas fa-fw fa-tachometer-alt"></i>
+
+			</NavItem>
 			
 			<hr className="sidebar-divider"/>
 
 			
-			<div className="sidebar-heading">Actions</div>
+			<div className="sidebar-heading">Actions</div>	
 
+			<NavItem title="Pages">
 			
-			<li className="nav-item">
-				<a className="nav-link collapsed" href="/">
-					<i className="fas fa-fw fa-folder"></i>
-					<span>Pages</span>
-				</a>
-			</li>
+				<i className="fas fa-fw fa-folder"></i>
 
+			</NavItem>
+
+			<NavItem title="Charts">
 			
-			<li className="nav-item">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-chart-area"></i>
-					<span>Charts</span></a>
-			</li>
+				<i className="fas fa-fw fa-chart-area"></i>
 
+			</NavItem>	
+
+			<NavItem title="Tables">
 			
-			<li className="nav-item">
-				<a className="nav-link" href="/">
-					<i className="fas fa-fw fa-table"></i>
-					<span>Tables</span></a>
-			</li>
+				<i className="fas fa-fw fa-table"></i>
 
+			</NavItem>		
 			
 			<hr className="sidebar-divider d-none d-md-block"/>
-		</ul>
-		
+
+		</ul>		
 
     )
 }
