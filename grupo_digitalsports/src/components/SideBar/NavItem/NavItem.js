@@ -1,14 +1,16 @@
-import React from 'react'
+import React from 'react';
 
+import PropTypes from 'prop-types';
 
+const NavItem = (props,{active}) => {
 
-export default function NavItem(props) {
+    let classLista = `nav-item ${active ?? ''}`;
 
     return (
 
-        <li className="nav-item">
+        <li className={classLista}>
 
-            <a className="nav-link" href="/">
+            <a className= 'nav-link collapsed' href="/">
 
                 {props.children}
 
@@ -20,3 +22,11 @@ export default function NavItem(props) {
 
     )
 }
+
+NavItem.propTypes = {
+
+    active: PropTypes.string
+
+}
+
+export default NavItem;

@@ -22,14 +22,13 @@ export default function SideBar() {
 			
 			<hr className="sidebar-divider my-0"/>		
 
-			<NavItem title="Dashboard">
+			<NavItem title="Dashboard" active= "active">
 
 				<i className="fas fa-fw fa-tachometer-alt"></i>
 
 			</NavItem>
 			
 			<hr className="sidebar-divider"/>
-
 			
 			<div className="sidebar-heading">Actions</div>	
 
