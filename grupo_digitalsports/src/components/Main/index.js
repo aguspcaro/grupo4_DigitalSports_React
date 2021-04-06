@@ -1,13 +1,13 @@
-import React from 'react'
+import React from 'react';
 
 /* ASSETS */
-import product from "../../assets/images/product_dummy.svg"
+import product from "../../assets/images/product_dummy.svg";
 
 /* COMPONENTS */
-import Header from "./Header/header"
-import Footer from "./Footer/footer"
-import Data from './Data/Data'
-import Panel from "./Panel/Panel"
+import Header from "./Header/header";
+import Footer from "./Footer/footer";
+import Data from "./Data/Data";
+import Panel from "./Panel/Panel";
 
 export default function Main() {	
 	
@@ -20,7 +20,6 @@ export default function Main() {
 				<Header />			
 					
 				<div className="container-fluid">
-
 					
 					<div className="d-sm-flex align-items-center justify-content-between mb-4">
 

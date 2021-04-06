@@ -22,7 +22,7 @@ export default function SideBar() {
 			
 			<hr className="sidebar-divider my-0"/>		
 
-			<NavItem title="Dashboard" active= "active">
+			<NavItem title="Dashboard" active='active'>
 
 				<i className="fas fa-fw fa-tachometer-alt"></i>
 

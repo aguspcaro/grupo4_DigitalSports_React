@@ -2,9 +2,11 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
-const NavItem = (props,{active}) => {
 
-    let classLista = `nav-item ${active ?? ''}`;
+
+const NavItem = (props) => {
+
+    let classLista = `nav-item ${props.active ?? ""}`;
 
     return (
 
