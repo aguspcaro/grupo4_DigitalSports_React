@@ -1,17 +1,19 @@
 import React from 'react';
-
 /* ASSETS */
 import product from "../../assets/images/product_dummy.svg";
 
 /* COMPONENTS */
-import Header from "./Header/header";
-import Footer from "./Footer/footer";
+import Header from "./Header/Header";
+import Footer from "./Footer/Footer";
 import Data from "./Data/Data";
 import Panel from "./Panel/Panel";
+import User from "./Users/Users";
 
-export default function Main() {	
-	
-	return (
+
+
+const Main = () => { 
+
+	return (		
 
         <div id="content-wrapper" className="d-flex flex-column">
 			
@@ -72,6 +74,12 @@ export default function Main() {
 
 						</div>
 
+						<div className="col-lg-6 mb-4">
+											
+							<User title= 'Listado de usuarios'/>
+
+						</div>
+
 					</div>
 					
 				</div>
@@ -83,3 +91,5 @@ export default function Main() {
 		</div>
     )
 }
+
+export default Main;
