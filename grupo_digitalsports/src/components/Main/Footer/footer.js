@@ -12,7 +12,7 @@ const Footer = () => {
 
 				<div className="copyright text-center my-auto">
 
-					<span> &copy; © digital-sports</span>
+					<span> &copy; digital-sports</span>
 
 				</div>
 
