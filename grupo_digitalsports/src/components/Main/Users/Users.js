@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react'; 
 import Category from './Category/Category';
 
-function useFetche(url, defaultResponse){ // recibe la api y una respuesta por default en el caso de que la api no llegue
-	const [data, setData] = useState(defaultResponse)
+function useFetche(url, defaultResponse){ // recibe la api y una respuesta por default que nosotros mismo, mas abajo, le indicamos.
+
+	const [data, setData] = useState(defaultResponse) // le agregamos como estado a data y a serData, el estado que le indicamos cuando hacemos uso de la funcion en la linea 33
 
 	async function getDataFromAPI(url){
 		try {
@@ -17,9 +18,9 @@ function useFetche(url, defaultResponse){ // recibe la api y una respuesta por d
 		}	catch (e) { console.log(e);}
 	}
 
-	useEffect(() => {
-		getDataFromAPI(url); // Esta funcion se va activar cada vez que se modifique la api. De esta manera vamos a mantener el dashboard actualizado.
-	}, [url]);
+	useEffect(() => { // // nos va a ayudar a emular el comportamiento de los ciclos de vida de un estado
+		getDataFromAPI(url); 
+	}, [url]); // es opcional, sus valores son variables, de las que depende nuestro efecto. Si el array esta vacio, no se va a actualizar(componentDidAmount). Si en vez de eso, le pasamos una api.. cada vez que se actualice la api, se ejectura esta funcion.(componentDidUpdate)
 
 	return data; // me llega la data en formato objeto
 
