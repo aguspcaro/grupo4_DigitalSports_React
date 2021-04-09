@@ -1,3 +1,5 @@
+import React, {useState, useEffect} from 'react'; 
+
 import Data from "./Data/Data";
 import Titulo from './Data/Titulo';
 import Panel from "./Panel/Panel";
@@ -7,7 +9,44 @@ import User from "./Users/Users";
 import product from "../../../assets/images/product_dummy.svg";
 
 
+function useFetche(url, defaultResponse){ 
+
+	const [data, setData] = useState(defaultResponse) 
+
+	async function getDataFromAPI(url){
+		try {
+			const res = await fetch(url);
+			const data = await res.json(); 
+
+			setData({ 
+                isLoading: false, 
+				data
+			})
+
+		}	catch (e) { console.log(e);}
+	}
+
+	useEffect(() => { 
+		getDataFromAPI(url); 
+	}, [url]); 
+
+	return data;
+
+}
+
 const SectionMain = () => { 
+
+    const apiEndpoint = 'http://localhost:3001/api/users/'
+
+	const userFetchResponse = useFetche(apiEndpoint, {isLoading: true, data: null}); 
+
+	if(!userFetchResponse.data || userFetchResponse.isLoading){
+		return 'Loading...';
+	}
+
+	const apiUser = userFetchResponse.data.meta;
+
+	console.log({apiUser});	
 
     return (
 
@@ -15,7 +54,7 @@ const SectionMain = () => {
                 <Titulo title="Digital Sports" />
             <div className="row">
                 <Data title="Total de productos" cant = "20"/>
-                <Data title="Total de usuarios" cant = "4"/>
+                <Data title="Total de usuarios" cant = {apiUser.count}/>
                 <Data title="Total de categorías" cant = "10"/>
             </div>					
                     
@@ -54,7 +93,7 @@ const SectionMain = () => {
                 </div>
                     
         </div>
-        
+
     )
 }
 
