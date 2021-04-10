@@ -61,17 +61,17 @@ const SectionMain = () => {
                 <div className="row">
                 
                     <div className="col-lg-6 mb-4">
-                        <Panel title="Last product in Data Dase">
+                        <Panel title="Ultimo producto seleccionado">
                         <div className="text-center">
                             <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width : "25rem"}} src={product} alt="dummy"/>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-                        <a target="_blank" rel="nofollow" href="/">View product detail</a>
+                        <a target="_blank" rel="nofollow" href="/">Ver detalle del Producto</a>
                         </Panel>
                     </div>
                     
                     <div className="col-lg-6 mb-4">						
-                        <Panel title="Categories in Data Base">
+                        <Panel title="Categorías en la base de datos">
                         <div className="row">
                             <div className="col-lg-6 mb-4">
                                 <div className="card bg-info text-white shadow">

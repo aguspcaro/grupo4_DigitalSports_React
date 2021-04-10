@@ -1,9 +1,9 @@
 import React from 'react';
 
 /* COMPONENTS */
-import Header from "./Header/Header";
+import Header from "./Header/header";
 import SectionMain from "./SectionMain/SectionMain"
-import Footer from "./Footer/Footer";
+import Footer from "./Footer/footer";
 
 
 
