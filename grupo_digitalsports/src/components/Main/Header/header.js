@@ -1,7 +1,7 @@
 import React from 'react'
 
 /* ASSETS */
-import avatar from "./img/logo-digital-sports.svg"
+import avatar from "./img/Ds.jpeg"
 
 const Header = () =>  {
 
@@ -21,37 +21,14 @@ const Header = () =>  {
 					
 					<ul className="navbar-nav ml-auto">
 						
-						<li className="nav-item dropdown no-arrow mx-1">
-
-							<a className="nav-link dropdown-toggle" href="/" id="alertsDropdown">
-
-								<i className="fas fa-bell fa-fw"></i>
-								
-								<span className="badge badge-danger badge-counter">3+</span>
-
-							</a>
-
-						</li>
 						
-						<li className="nav-item dropdown no-arrow mx-1">
-
-							<a className="nav-link dropdown-toggle" href="/" id="messagesDropdown">
-
-								<i className="fas fa-envelope fa-fw"></i>
-								
-								<span className="badge badge-danger badge-counter">7</span>
-
-							</a>
-
-						</li>
-
 						<div className="topbar-divider d-none d-sm-block"></div>
 						
 						<li className="nav-item dropdown no-arrow">
 
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
 
-								<span className="mr-2 d-none d-lg-inline text-gray-600 small">Digital Sports</span>
+								<a href= 'http://localhost:3001' className="mr-2 d-none d-lg-inline text-gray-600 small">Digital Sports</a>
 
 								<img className="img-profile rounded-circle" src={avatar} alt="img-profile" width="60"/>
 
