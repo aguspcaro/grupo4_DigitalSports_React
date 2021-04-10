@@ -8,7 +8,6 @@ import User from "./Users/Users";
 /* ASSETS */
 import product from "../../../assets/images/product_dummy.svg";
 
-
 function useFetche(url, defaultResponse){ 
 
 	const [data, setData] = useState(defaultResponse) 
@@ -27,7 +26,7 @@ function useFetche(url, defaultResponse){
 	}
 
 	useEffect(() => { 
-		getDataFromAPI(url); 
+		getDataFromAPI(url);
 	}, [url]); 
 
 	return data;
