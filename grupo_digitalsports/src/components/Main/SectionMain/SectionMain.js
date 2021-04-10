@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react'
+import React, {useState, useEffect} from 'react'; 
+
 import Data from "./Data/Data";
 import Titulo from './Data/Titulo';
 import Panel from "./Panel/Panel";
@@ -8,81 +9,92 @@ import User from "./Users/Users";
 import product from "../../../assets/images/product_dummy.svg";
 
 
+function useFetche(url, defaultResponse){ 
+
+	const [data, setData] = useState(defaultResponse) 
+
+	async function getDataFromAPI(url){
+		try {
+			const res = await fetch(url);
+			const data = await res.json(); 
+
+			setData({ 
+                isLoading: false, 
+				data
+			})
+
+		}	catch (e) { console.log(e);}
+	}
+
+	useEffect(() => { 
+		getDataFromAPI(url); 
+	}, [url]); 
+
+	return data;
+
+}
 
 const SectionMain = () => { 
 
-     useEffect(function() {
-        console.log("useEffect50")
-     }) 
+    const apiEndpoint = 'http://localhost:3001/api/users/'
 
-     useEffect(  () => {
-        console.log("useEffect2")
-     })
+	const userFetchResponse = useFetche(apiEndpoint, {isLoading: true, data: null}); 
 
+	if(!userFetchResponse.data || userFetchResponse.isLoading){
+		return 'Loading...';
+	}
 
-    let contadorCategorias;
+	const apiUser = userFetchResponse.data.meta;
 
+	console.log({apiUser});	
 
-    fetch('http://localhost:3001/api/products')
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(resultado) {
-        contadorCategorias = resultado.meta.countByCategory
-        return contadorCategorias
-    })
-    .catch(function(error) {
-        console.log(error)
-    })
+    return (
 
-    console.log(contadorCategorias)
-
-
-    return (		
-     <div className="container-fluid">
-            <Titulo title="Digital Sports"/ >
+            <div className="container-fluid">
+                <Titulo title="Digital Sports" />
             <div className="row">
-             <Data title="Total de productos" cant = "20"/>
-             <Data title="Total de usuarios" cant = "4"/>
-             <Data title="Total de categorías" cant = "10"/>
-             </div>					
-                     
+                <Data title="Total de productos" cant = "20"/>
+                <Data title="Total de usuarios" cant = {apiUser.count}/>
+                <Data title="Total de categorías" cant = "10"/>
+            </div>					
+                    
                 <div className="row">
-                     
-                         <div className="col-lg-6 mb-4">
-                             <Panel title="Last product in Data Dase">
-                             <div className="text-center">
-                                 <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width : "25rem"}} src={product} alt="dummy"/>
-                             </div>
-                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-                             <a target="_blank" rel="nofollow" href="/">View product detail</a>
-                             </Panel>
-                         </div>
-                         
-                         <div className="col-lg-6 mb-4">						
-                             <Panel title="Categories in Data Base">
-                             <div className="row">
-                               <div className="col-lg-6 mb-4">
-                                   <div className="card bg-info text-white shadow">
-                                  <div className="card-body">
-                                      {contadorCategorias}
-                                  </div>
-                                 </div>
-                              </div>
-                           </div>
-                             </Panel>
-                         </div>
-                     
-                         <div className="col-lg-6 mb-4">
-                                             
-                             <User title= 'Listado de usuarios'/>
-                     
-                         </div>
-                     
-                     </div>
-                     
-                     </div>
-   )
+                
+                    <div className="col-lg-6 mb-4">
+                        <Panel title="Last product in Data Dase">
+                        <div className="text-center">
+                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width : "25rem"}} src={product} alt="dummy"/>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
+                        <a target="_blank" rel="nofollow" href="/">View product detail</a>
+                        </Panel>
+                    </div>
+                    
+                    <div className="col-lg-6 mb-4">						
+                        <Panel title="Categories in Data Base">
+                        <div className="row">
+                            <div className="col-lg-6 mb-4">
+                                <div className="card bg-info text-white shadow">
+                                    <div className="card-body">
+                                        Category 01
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </Panel>
+                    </div>
+                
+                    <div className="col-lg-6 mb-4">
+                                        
+                        <User title= 'Listado de usuarios'/>
+                
+                    </div>
+                
+                </div>
+                    
+        </div>
+
+    )
 }
 
 export default SectionMain;
