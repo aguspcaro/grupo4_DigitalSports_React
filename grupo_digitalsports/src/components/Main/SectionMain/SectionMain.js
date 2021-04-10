@@ -44,7 +44,7 @@ const SectionMain = () => {
 const [productos, setProducto]=React.useState([])
 
 React.useEffect( () =>{
-	listadoProductos()
+    listadoProductos()
 },[])
 /*hook de total de productos    */
 
@@ -68,7 +68,7 @@ React.useEffect( () =>{
 
 	const apiUser = userFetchResponse.data.meta;
 
-	console.log({apiUser});	
+	//console.log({apiUser});	
 
     return (
 
@@ -77,7 +77,7 @@ React.useEffect( () =>{
             <div className="row">
                 <Data title="Total de productos" cant = {productos.meta.count}/>
                 <Data title="Total de usuarios" cant = {apiUser.count}/>
-                <Data title="Total de categorías" cant = "10"/>
+                <Data title="Total de categorías" cant = {productos.meta.countByCategory.length}/>
             </div>					
                     
                 <div className="row">
