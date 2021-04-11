@@ -1,8 +1,6 @@
 import React from 'react'
 import  LastProduct  from './LastProduct/LastProduct';
 
-import imageLastProduct from '../../../../'
-
 const PanelProducts = (props) => {
 
 
@@ -38,15 +36,7 @@ const PanelProducts = (props) => {
 
             <div class="card-body">
 
-               
-
-                {<LastProduct title={productos.name} description={productos.description} image="">        
-                
-                </LastProduct>}
-
-            
-
-
+                <LastProduct title={productos.name} description={productos.description} image={`http://localhost:3001${productos.img}`}/>
 
             </div>
 
