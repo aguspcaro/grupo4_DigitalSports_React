@@ -39,7 +39,7 @@ const Panel = (props) => {
 						{
 							productos.map((product,i) =>(
 						
-							<CategoryList key={product +1 } name={product.name} cantidad={product.cantidad} />
+							<CategoryList key={product + i } name={product.name} cantidad={product.cantidad} />
 						
 							))
 

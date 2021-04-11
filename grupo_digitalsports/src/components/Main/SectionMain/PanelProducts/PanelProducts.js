@@ -35,7 +35,7 @@ const PanelProducts = (props) => {
 
             </div>
 
-            <div class="card-body">
+            <div className="card-body">
 
                 <LastProduct title={productos.name} description={productos.description} image={`http://localhost:3001${productos.img}`} detail={`http://localhost:3001/products/detail/${productos.id}`}/>
                                     
