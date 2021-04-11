@@ -10,15 +10,15 @@ export default function Menu() {
 		
 		<ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+		<a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
 
-			<div class="sidebar-brand-icon">
+			<div className="sidebar-brand-icon">
 
-				<i class="fas fa-chart-line"></i>
+				<i className="fas fa-chart-line"></i>
 
 			</div>
 
-			<div class="sidebar-brand-text mx-3">Admin</div>
+			<div className="sidebar-brand-text mx-3">Admin</div>
 
 		</a>
 		

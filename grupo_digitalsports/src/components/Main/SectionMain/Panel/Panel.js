@@ -1,9 +1,6 @@
 import React from 'react';
+
 import CategoryList from './CategoryList/CategoryList'
-
-
-
-
 
 
 const Panel = (props) => {
