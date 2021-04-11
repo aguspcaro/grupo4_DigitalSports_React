@@ -6,7 +6,7 @@ const List = (props) => {
         
         <div className="card bg-info text-white shadow">
             <div className="card-body">
-                {props.id}    {props.name}
+                {props.id} {props.name}
                 
             </div>
 
