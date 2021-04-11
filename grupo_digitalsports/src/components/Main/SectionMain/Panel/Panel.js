@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import CategoryList from './CategoryList/CategoryList'
 
-import CategoryList from './CategoryList/CategoryList'
+
 
 
 function useFetche(url, defaultResponse){ 
