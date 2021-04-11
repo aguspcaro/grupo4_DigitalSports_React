@@ -3,7 +3,7 @@ import React from 'react';
 /* COMPONENTS */
 import Header from "./Header/header";
 import SectionMain from "./SectionMain/SectionMain"
-import Footer from "./Footer/footer";
+import Footer from "./Footer/Footer";
 
 
 
@@ -23,7 +23,7 @@ const Main = () => {
 
 			</div>
 
-			<Footer/>				
+			<Footer />				
 
 		</div>
     )

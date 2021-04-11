@@ -1,22 +1,5 @@
 import React from 'react';
 
-/*
-fetch('http://localhost:3001/api/users')
-
-.then(function(users){
-
-	response.json(users)
-})
-
-.then(function(usersDecodeS){
-
-})
-
-.catch((errno) => {console.log(errno);})*/
-
-
-
-
 const Data = (props) =>{
 
 
