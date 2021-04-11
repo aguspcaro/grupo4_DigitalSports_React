@@ -1,6 +1,6 @@
 import React from 'react'
 
-//import CategoryList from './CategoryList/CategoryList'
+import CategoryList from './CategoryList/CategoryList'
 
 const Panel = (props) => {
 
@@ -20,13 +20,13 @@ const listadoProductos= async()=>{
 	const data = await fetch ("http://localhost:3001/api/products")
 	const products = await data.json()
 	//console.log (products)
-	setProducto(products)
+	setProducto(products.meta.countByCategory)
 
 }
 
-console.log(productos.meta);
+//console.log(productos.meta?.countByCategory);
 
-const producto = productos.meta
+
 
 
 
@@ -47,6 +47,14 @@ const producto = productos.meta
 
 					<div className="col-lg-6 mb-4">
 						
+						{
+							productos.map((product,i) =>(
+						
+							<CategoryList key={product +1 } name={product.name} cantidad={product.cantidad} />
+						
+							))
+
+							}
 						
 					
 
