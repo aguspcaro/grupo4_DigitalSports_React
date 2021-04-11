@@ -5,7 +5,7 @@ import React from 'react'
 const Panel = (props) => {
 
 
-/* hook de total de productos 
+/* hook de total de productos */
 const [productos, setProducto]=React.useState([])
 
 React.useEffect( () =>{
@@ -14,7 +14,7 @@ React.useEffect( () =>{
 
 /* hook de total de productos */
 
-/* hook productos llamado a la api 
+/* hook productos llamado a la api */
 const listadoProductos= async()=>{
 
 	const data = await fetch ("http://localhost:3001/api/products")
@@ -24,7 +24,13 @@ const listadoProductos= async()=>{
 
 }
 
-console.log(listadoProductos);
+console.log(productos.meta);
+
+const producto = productos.meta
+
+
+
+
 
 /* hook productos llamado a la api    */
 
@@ -41,9 +47,8 @@ console.log(listadoProductos);
 
 					<div className="col-lg-6 mb-4">
 						
-						{
-							// <CategoryList product={}/> aca deberiamos iterar y mostrar las categorias
-						}
+						
+					
 
 					</div>
 
