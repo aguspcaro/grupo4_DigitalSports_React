@@ -1,7 +1,7 @@
 import React from 'react'
 
 /* ASSETS */
-import avatar from "./img/logo-digital-sports.svg"
+import avatar from "./img/Ds.png"
 
 const Header = () =>  {
 
