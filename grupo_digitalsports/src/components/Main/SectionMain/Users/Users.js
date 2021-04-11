@@ -58,9 +58,9 @@ const User = (props) => {
 					<div className="col-lg-6 mb-4">
 
 						{
-							apiUser.map((users) => ( 
+							apiUser.map((users, i) => ( 
 								
-								<Category usuario = {users.email}/>
+								<Category key={users + i} usuario = {users.email}/>
 						
 							))
 						}						
