@@ -18,7 +18,7 @@ export default function Menu() {
 
 			</div>
 
-			<div className="sidebar-brand-text mx-3">Admin</div>
+			<div className="sidebar-brand-text mx-3">Administrador</div>
 
 		</a>
 		
@@ -34,7 +34,7 @@ export default function Menu() {
 		
 		<div className="sidebar-heading">Actions</div>	
 
-		<NavItem title="Pages">
+		<NavItem title="Productos" href="http://localhost:3001/products/admin">
 		
 			<i className="fas fa-fw fa-folder"></i>
 
