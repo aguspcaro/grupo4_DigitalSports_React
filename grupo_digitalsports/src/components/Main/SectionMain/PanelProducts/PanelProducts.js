@@ -1,8 +1,6 @@
 import React from 'react'
 import  LastProduct  from './LastProduct/LastProduct';
 
-import imageLastProduct from '../../../../'
-
 const PanelProducts = (props) => {
 
 
@@ -40,11 +38,12 @@ const PanelProducts = (props) => {
 
                
 
-                {<LastProduct title={productos.name} description={productos.description} image='localhost:3001/images/products/1614872324801.jpg'>
+                <LastProduct title={productos.name} description={productos.description} image={`http://localhost:3001${productos.img}`}/>
+                    
                 
                 
                 
-                </LastProduct>}
+            
 
             
 
