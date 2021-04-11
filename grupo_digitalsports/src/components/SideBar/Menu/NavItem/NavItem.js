@@ -12,7 +12,7 @@ const NavItem = (props) => {
 
         <li className={classLista}>
 
-            <a className= 'nav-link collapsed' href="/">
+            <a target="_blank" className= 'nav-link collapsed' href={props.href}>
 
                 {props.children}
 
