@@ -4,14 +4,7 @@ import Data from "./Data/Data";
 import Titulo from './Data/Titulo';
 import Panel from "./Panel/Panel";
 import User from "./Users/Users";
-
-/* ASSETS */
-import product from "../../../assets/images/product_dummy.svg";
-
-
-
-
-
+import PanelProducts from "./PanelProducts/PanelProducts";
 
 function useFetche(url, defaultResponse){ 
 
@@ -40,35 +33,35 @@ function useFetche(url, defaultResponse){
 
 const SectionMain = () => { 
   
-/*hook de total de productos    */
-const [productos, setProducto]=React.useState([])
+    /* hook de total de productos */
+    const [productos, setProducto]=React.useState([])
 
-React.useEffect( () =>{
-    listadoProductos()
-},[])
-/*hook de total de productos    */
+    React.useEffect( () =>{
+        listadoProductos()
+    },[])
+    /* hook de total de productos */
 
-/* hook productos llamado a la api    */
+    /* hook productos llamado a la api */
     const listadoProductos= async()=>{
-		const data = await fetch ("http://localhost:3001/api/products")
-		const products = await data.json()
-		//console.log (products)
-		setProducto(products)
-}
-/* hook productos llamado a la api    */
+        const data = await fetch ("http://localhost:3001/api/products")
+        const products = await data.json()
+        //console.log (products)
+        setProducto(products)
 
+    }
+    /* hook productos llamado a la api */
 
-    const apiEndpoint = 'http://localhost:3001/api/users/'
+    const apiUserEndpoint = 'http://localhost:3001/api/users'
 
-	const userFetchResponse = useFetche(apiEndpoint, {isLoading: true, data: null}); 
+	const useFetchResponse = useFetche(apiUserEndpoint, {isLoading: true, data: null}); 
 
-	if(!userFetchResponse.data || userFetchResponse.isLoading){
+	if(!useFetchResponse.data || useFetchResponse.isLoading){
 		return 'Loading...';
 	}
 
-	const apiUser = userFetchResponse.data.meta;
+	const apiUser = useFetchResponse.data.meta;
 
-	//console.log({apiUser});	
+    console.log(apiUser);
 
     return (
 
@@ -83,27 +76,17 @@ React.useEffect( () =>{
                 <div className="row">
                 
                     <div className="col-lg-6 mb-4">
-                        <Panel title="Ultimo producto seleccionado">
-                        <div className="text-center">
-                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width : "25rem"}} src={product} alt="dummy"/>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
-                        <a target="_blank" rel="nofollow" href="/">Ver detalle del Producto</a>
-                        </Panel>
+
+                        <PanelProducts title="Último producto agregado"/>
+
+
                     </div>
+
                     
-                    <div className="col-lg-6 mb-4">						
-                        <Panel title="Categorías en la base de datos">
-                        <div className="row">
-                            <div className="col-lg-6 mb-4">
-                                <div className="card bg-info text-white shadow">
-                                    <div className="card-body">
-                                    categorias a dibujar
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </Panel>
+                    <div className="col-lg-6 mb-4">		
+
+                        <Panel title="Categorías en la base de datos"/>
+
                     </div>
                 
                     <div className="col-lg-6 mb-4">

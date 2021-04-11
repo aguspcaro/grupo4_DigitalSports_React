@@ -1,16 +1,17 @@
 import React from 'react';
 
-const Category = (props) => {    
+const CategoryList = (props) => {    
 	
     return (
         
         <div className="card bg-info text-white shadow">
             <div className="card-body">
-                {props.usuario}
+                {props.product}
             </div>
+
         </div>
 						    
     )
 }
 
-export default Category;
+export default CategoryList;
