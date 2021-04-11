@@ -40,9 +40,7 @@ const PanelProducts = (props) => {
 
                
 
-                {<LastProduct title={productos.name} description={productos.description} image='localhost:3001/images/products/1614872324801.jpg'>
-                
-                
+                {<LastProduct title={productos.name} description={productos.description} image="">        
                 
                 </LastProduct>}
 
