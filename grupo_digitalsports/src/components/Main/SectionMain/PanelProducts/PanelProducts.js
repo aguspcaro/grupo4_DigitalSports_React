@@ -1,10 +1,30 @@
 import React from 'react'
+import  LastProduct  from './LastProduct/LastProduct';
 
-/* ASSETS */
-
-import product from '../../../../assets/images/product_dummy.svg';
+import imageLastProduct from '../../../../'
 
 const PanelProducts = (props) => {
+
+
+		/* hook de total de productos */
+        const [productos, setProducto]=React.useState([])
+
+        React.useEffect( () =>{
+            listadoProductos()
+        },[])
+        /* hook de total de productos */
+    
+        /* hook productos llamado a la api */
+        const listadoProductos= async()=>{
+            const data = await fetch ("http://localhost:3001/api/products")
+            const products = await data.json()
+            //console.log (products)
+            setProducto(products.lastProductCreated)
+    
+        }
+        /* hook productos llamado a la api */
+        console.log (productos)                           
+
 
     return (
 
@@ -18,15 +38,17 @@ const PanelProducts = (props) => {
 
             <div class="card-body">
 
-                <div className="text-center">
+               
 
-                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width : "25rem"}} src={product} alt="dummy"/>
+                {<LastProduct title={productos.name} description={productos.description} image='localhost:3001/images/products/1614872324801.jpg'>
+                
+                
+                
+                </LastProduct>}
 
-                </div>
+            
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam</p>
 
-                <a target="_blank" rel="nofollow" href="/">Ver detalle del Producto</a>
 
             </div>
 

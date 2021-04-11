@@ -46,8 +46,7 @@ const SectionMain = () => {
         const data = await fetch ("http://localhost:3001/api/products")
         const products = await data.json()
         //console.log (products)
-        setProducto(products)
-
+        setProducto(products.meta)
     }
     /* hook productos llamado a la api */
 
@@ -68,9 +67,9 @@ const SectionMain = () => {
             <div className="container-fluid">
                 <Titulo title="Digital Sports" />
             <div className="row">
-                <Data title="Total de productos" cant = {productos.meta.count}/>
+                <Data title="Total de productos" cant = {productos.count}/>
                 <Data title="Total de usuarios" cant = {apiUser.count}/>
-                <Data title="Total de categorías" cant = {productos.meta.countByCategory.length}/>
+                <Data title="Total de categorías" cant = {productos.countByCategory.length}/>
             </div>					
                     
                 <div className="row">
