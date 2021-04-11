@@ -5,6 +5,7 @@ import Titulo from './Data/Titulo';
 import Panel from "./Panel/Panel";
 import User from "./Users/Users";
 import PanelProducts from "./PanelProducts/PanelProducts";
+import ListProducts from "./ListProducts/ListProducts";
 
 function useFetche(url, defaultResponse){ 
 
@@ -74,24 +75,29 @@ const SectionMain = () => {
                     
                 <div className="row">
                 
-                    <div className="col-lg-6 mb-4">
-
-                        <PanelProducts title="Último producto agregado"/>
-
-
-                    </div>
-
                     
                     <div className="col-lg-6 mb-4">		
 
                         <Panel title="Categorías en la base de datos"/>
 
                     </div>
-                
+
                     <div className="col-lg-6 mb-4">
                                         
                         <User title= 'Listado de usuarios'/>
                 
+                    </div>
+
+                    <div className="col-lg-6 mb-4">
+
+                        <PanelProducts title="Último producto agregado"/>
+
+                    </div>
+
+                    <div className="col-lg-6 mb-4">
+
+                        <ListProducts title="Listado de productos"/>
+
                     </div>
                 
                 </div>
