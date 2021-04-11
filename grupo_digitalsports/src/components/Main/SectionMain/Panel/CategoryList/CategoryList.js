@@ -6,7 +6,8 @@ const CategoryList = (props) => {
         
         <div className="card bg-info text-white shadow">
             <div className="card-body">
-                {props.product}
+                {props.name} : {props.cantidad}
+                
             </div>
 
         </div>

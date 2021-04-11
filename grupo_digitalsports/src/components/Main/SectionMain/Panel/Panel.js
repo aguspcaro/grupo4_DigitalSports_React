@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 import CategoryList from './CategoryList/CategoryList'
 
+import CategoryList from './CategoryList/CategoryList'
 
 
 function useFetche(url, defaultResponse){ 
@@ -21,13 +22,14 @@ function useFetche(url, defaultResponse){
 		}	catch (e) { console.log(e);}
 	}
 
-	useEffect(() => { 
-		getDataFromAPI(url);
-	}, [url]); 
-
-	return data;
+	const data = await fetch ("http://localhost:3001/api/products")
+	const products = await data.json()
+	//console.log (products)
+	setProducto(products.meta.countByCategory)
 
 }
+
+//console.log(productos.meta?.countByCategory);
 
 
 
@@ -68,14 +70,14 @@ console.log(nombre)
 					<div className="col-lg-6 mb-4">
 						
 						{
-
-							apiProd.map((prod, i) => ( 
-
-								<CategoryList key={prod + i} product={prod}/>
-								
+							productos.map((product,i) =>(
+						
+							<CategoryList key={product +1 } name={product.name} cantidad={product.cantidad} />
+						
 							))
 
-						}
+							}
+						
 					
 
 					</div>
