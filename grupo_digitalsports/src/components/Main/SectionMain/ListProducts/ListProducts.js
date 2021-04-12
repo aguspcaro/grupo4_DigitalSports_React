@@ -37,17 +37,38 @@ import List from './List/List'
 
             <div className="row">
 
-                <div className="col-lg-6 mb-4">
-
-                    	
-						{
+                <div className="col-lg-12 mb-4">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Producto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                            {
 							productos.map((product, i) => ( 
 								
-								<List key={product + i} id = {"Id: "+product.id+" -"} name = {"Nombre: "+product.name}/>
+								<List key={product + i} id = {product.id}/>
 						
 							))
-						}	
-
+						    }	
+                            </td>
+                            <td>{
+							productos.map((product, i) => ( 
+								
+								<List key={product + i} name = {product.name}/>
+						
+							))
+						    }	
+                            </td>
+    
+                        </tr>
+                    </tbody>
+            
+                </table>
                 </div>
 
             </div>
