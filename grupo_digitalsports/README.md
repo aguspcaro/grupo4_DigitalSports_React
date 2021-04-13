@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+---
+# *Digital Sports*  
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+| AMBIENTE | PARA PROBAR EL CRUD, ENTRAR AL ADMIN POR ESTA URL |
+| ------------------ | ---- |
+| *ADMIN* | [ADMIN](http://localhost:3000/products/admin) |
 
-## Available Scripts
+### Temática del sitio
 
-In the project directory, you can run:
+  - Servicio de venta online de indumentaria y productos deportivos para:
 
-### `npm start`
+	- Mujeres
+	- Hombres
+	- Niños
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - Productos que se van a comercializar: Medias, pantalones, shorts, remeras, zapatillas, y artúculos deportivos y equipamientos en general.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Público Objetivo
 
-### `npm test`
+- Mujeres de 18 a 60 años. Nivel socieconómico a,b,c 1.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Hombres de 18 a 60 años. Nivel socieconómico a,b,c 1.
 
-### `npm run build`
+### Páginas Referentes
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> [Beko](https://www.beko.com/es-es)
+Muy facil de interpretar, muy dinámica, colores y diseño agradable.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> [Mercado Libre](https://www.mercadolibre.com.ar)
+Variedad de productos. Mezcla óptima entre diseño, funcionalidad. Nos gusta la forma de distribuir los productos y como va directamente al grano según las necesidades de cada comprador, según el historial de busqueda.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> [Adidas](https://www.adidas.com.ar/)
+Interfaz muy cómoda para navegar. Variedad de contenido (videos, fotos, etc). Fácil de utilizar y de realizar la compra. Diseño agradable.
 
-### `npm run eject`
+> [deautos](https://www.deautos.com/)
+Productos bien detallados. Dinámica. Variedad de servicios y productos. Fácil de usar.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> [Rip Curl Argentina](https://www.ripcurlargentina.com/)
+Visualmente llamativa - Prodcutos bien detallados. Variedad de servicios y prodcutos. Te va llevando por los diferentes productos que tiene y está bien categorizado para facilitar la busqueda.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Equipo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Agustín Caro**: Tengo 25 años. Soy Licenciado en Administración. Principiante en Programacion. Jugador de Rugby. Arriba el mate y el asado!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Alejandro Widomlanski**: Tengo 36 años. Me egrese de Director de Arte publicitario en el año 2009. No tengo expreriencia en programación anteriormente. Me gusta mucho el fútbol, y pasar momentos con familia y amigos.
 
-## Learn More
+**David Kopp**: Apasionado de la tecnología, esposo y padre de 2 hijos, soy programador de Visual Foxpro buscando actualizarme, me gusta la birra y el asado, saludos desde Córdoba la cuna del fernet!!!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Jorge Jones**: Soy licenciado en Comunicación y hace años me dedico a la producción de eventos. No tengo experiencia en programación y espero adquirirla junto a este equipazo! Soy feliz padre de tres hijos: una mujer y dos varones. Si me preguntan por mi club favorito les diré que nuestro rival murió en Madrid!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Estrategias de Marketing
 
-### Code Splitting
+- Posicionar al sitio como un referente en el mercado deportivo en términos de indumentaria, productos, equipamientos y servicios.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Nuestro objetivo es que se piense en nuestro sitio como referencia en este mercado.
 
-### Analyzing the Bundle Size
+- Buscaremos vender una filosofía de vida, asociando la actividad deportiva a una vida plena y saludable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Esto lo llevaremos adelante a través de las redes sociales tradicionales, patrocinando y organizando eventos. A través de influencers, publicidad en medios gráficos y onlines deportivos, y programas de magazine.
 
-### Making a Progressive Web App
+--- 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Repositorio | Link |
+| ----------- | ---- |
+| *Git hub* | [Digital Sports](https://github.com/aguspcaro/Proyecto---Digital-House.git) |
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Tablero de Trabajo | Link |
+| ------------------ | ---- |
+| *Trello* | [Digital Sports](https://trello.com/b/ltePxjNR/tareas) |
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
