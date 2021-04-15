@@ -48,6 +48,7 @@ const Panel = (props) => {
 					
 
 					</div>
+					
 
 				</div>
 
